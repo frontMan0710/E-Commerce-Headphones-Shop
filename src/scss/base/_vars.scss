@@ -1,0 +1,21 @@
+:root {
+	--poppinsFont: "Poppins", sans-serif;
+	--interFont: "Inter", sans-serif;
+	--spaceFont: "Space Grotesk", sans-serif;
+
+	--blackColor: rgba(20, 23, 24, 1);
+	--greyColor: rgba(108, 114, 117, 1);
+	--greyColorLight: rgba(244, 245, 247, 1);
+	--greyColorOpacity: rgba(108, 114, 117, 0.5);
+	--clayColor: rgba(243, 245, 247, 1);
+	--yellowColor: rgba(255, 171, 0, 1);
+	--yellowColorLight: rgba(255, 201, 92, 1);
+	--yellowColorOpacity: rgba(255, 171, 0, 0.4);
+	--blueColor: rgba(55, 125, 255, 1);
+	--whiteColor: rgba(255, 255, 255, 1);
+
+	--semanticLayer: 1;
+	--headerLayer: 2;
+	--navigationLayer: 3;
+	--popupLayer: 4;
+}

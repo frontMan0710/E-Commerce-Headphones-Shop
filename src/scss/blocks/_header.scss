@@ -1,0 +1,268 @@
+@import "./src/scss/base/visual";
+@import "./src/scss/base/burger";
+@media screen and (min-width: 907px) {
+	header {
+		@include headerBase;
+		nav.navOffer {
+			height: 40px;
+		}
+		nav.navHeader {
+			height: 60px;
+			.navContent {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.logo {
+					max-width: 105px;
+					img {
+						width: 100%;
+					}
+				}
+				.navigation, .userMenu {
+					font-family: "Space Grotesk", sans-serif;
+					font-weight: 500;
+					display: flex;
+					align-items: center;
+					width: max-content;
+					height: 100%;
+				}
+				#menuContent {
+					.navigation {
+						@include dropdown;
+						gap: 40px;
+						.mobileNavigation,
+						.mobileSearch {
+							display: none;
+						}
+					}
+					.userMenu {
+						display: none;
+					}
+				}
+				.userMenu {
+					gap: 16px;
+					li {
+						display: flex;
+						align-items: center;
+						cursor: pointer;
+					}
+					li.cart {
+						@include cart;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 906px) and (min-width: 680px) {
+	header {
+		@include headerBase;
+		nav.navOffer {
+			height: 36px;
+		}
+		nav.navHeader {
+			height: 60px;
+			.navContent {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.logo {
+					display: flex;
+					align-items: center;
+					gap: 4px;
+					height: 24px;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				#menuContent {
+					background-color: var(--yellowColorLight);
+					z-index: var(--headerLayer);
+					display: flex;
+					justify-content: space-between;
+					width: 100%;
+					height: 60px;
+					padding: 0 8.53vw 0 8.53vw;
+					.navigation, .userMenu {
+						font-family: "Space Grotesk", sans-serif;
+						font-weight: 500;
+						display: flex;
+						align-items: center;
+						width: max-content;
+						height: 100%;
+					}
+					.navigation {
+						@include dropdown;
+						gap: 40px;
+						.mobileNavigation,
+						.mobileSearch {
+							display: none;
+						}
+					}
+					.userMenu {
+						gap: 16px;
+						li {
+							display: flex;
+							align-items: center;
+							&.mobileCart, &.mobileWishlist,
+							&.mobileSignIn, &.mobileLinks {
+								display: none;
+							}
+						}
+					}
+				}
+				.userMenu {
+					gap: 16px;
+					li {
+						display: flex;
+						align-items: center;
+						cursor: pointer;
+						&.searchButton, &.userProfile {
+							display: none;
+						}
+					}
+					li.cart {
+						@include cart;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 679px) {
+	header {
+		@include headerBase;
+		nav.navOffer {
+			height: 36px;
+		}
+		nav.navHeader {
+			height: 60px;
+			.navContent {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.logo {
+					display: flex;
+					align-items: center;
+					gap: 4px;
+					height: 24px;
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+				#menuContent {
+					background-color: var(--whiteColor);
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					overflow-y: scroll;
+					z-index: var(--headerLayer);
+					gap: 16px;
+					width: 91.46vw;
+					min-height: 100vh;
+					padding: 24px;
+					.navigation, .userMenu {
+						font-family: "Space Grotesk", sans-serif;
+						display: flex;
+						align-items: flex-start;
+						flex-direction: column;
+						font-weight: 500;
+						gap: 16px;
+						width: max-content;
+					}
+					.mobileNavigation {
+						display: flex;
+						justify-content: space-between;
+					}
+					.mobileSearch {
+						display: flex;
+						align-items: center;
+						border: 1px var(--blackColor) solid;
+						gap: 8px;
+						width: 100%;
+						height: 46px;
+						border-radius: 6px;
+						padding: 11px 16px 11px 16px;
+						img {
+							height: 24px;
+							width: 24px;
+						}
+						input {
+							font-family: var(--interFont);
+							color: var(--greyColor);
+							width: 100%;
+							height: 100%;
+							font-size: 16px;
+						}
+					}
+					.navigation {
+						@include dropdown;
+						width: 100%;
+						li, li.dropdown {
+							display: flex;
+							width: 100%;
+							a {
+								color: var(--blackColor);
+								display: flex;
+								align-items: center;
+								height: 40px;
+								width: 100%;
+							}
+						}
+					}
+					.userMenu {
+						display: flex;
+						flex-direction: column;
+						gap: 16px;
+						width: 100%;
+						li {
+							font-family: var(--interFont);
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							cursor: pointer;
+							width: 100%;
+							span {
+								color: var(--greyColor);
+							}
+							.cart, .wishlist {
+								@include cart;
+								div {
+									span {
+										color: var(--whiteColor);
+									}
+								}
+							}
+							a.signIn {
+								@include ancButton;
+								width: 100%;
+								height: 52px;
+								margin-top: 16px;
+							}
+							ul.contactLinks {
+								display: flex;
+								gap: 24px;
+							}
+						}
+					}
+				}
+				.userMenu {
+					gap: 16px;
+					li {
+						display: flex;
+						align-items: center;
+						cursor: pointer;
+						&.searchButton, &.userProfile {
+							display: none;
+						}
+					}
+					li.cart {
+						@include cart;
+					}
+				}
+			}
+		}
+	}
+}

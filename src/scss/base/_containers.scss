@@ -1,0 +1,36 @@
+.contentBorder {
+	height: 100%;
+	margin: 0 auto;
+}
+header {
+	height: auto;
+}
+main {
+	font-family: var(--poppinsFont);
+	width: 100%;
+}
+section {
+	padding: 48px 0 48px 0;
+	@media screen and (max-width: 906px) {
+		padding: 32px 0 32px 0;
+	}
+}
+.swiper-pagination {
+	z-index: var(--semanticLayer) !important;
+}
+@media screen and (min-width: 1440px) {
+	.contentBorder {
+		width: 77.77vw;
+		max-width: 1440px;
+	}
+}
+@media screen and (max-width: 1439px) and (min-width: 907px) {
+	.contentBorder {
+		width: 77.77vw;
+	}
+}
+@media screen and (max-width: 906px) {
+	.contentBorder {
+		width: 83.2vw;
+	}
+}

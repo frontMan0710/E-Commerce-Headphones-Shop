@@ -1,0 +1,427 @@
+@import "vars.scss";
+@mixin headerBase {
+  background-color: var(--yellowColorLight);
+  z-index: var(--headerLayer);
+  position: fixed;
+  width: 100%;
+  nav {
+    width: 100%;
+    &.navOffer {
+      background-color: var(--blackColor);
+      z-index: var(--navigationLayer);
+      .navContent {
+        @include notification;
+        @media screen and (max-width: 1439px) and (min-width: 907px) {
+          width: 77.77vw;
+        }
+        @media screen and (max-width: 906px) {
+          width: 82.93vw;
+        }
+      }
+    }
+    &.navHeader {
+      background-color: inherit;
+      z-index: var(--headerLayer);
+    }
+  }
+}
+@mixin notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1440px;
+  padding: 0 10px 0 10px;
+  @media screen and (max-width: 679px) {
+    padding: 0;
+  }
+  .notification {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    line-height: 100%;
+    width: max-content;
+    min-width: 224px;
+    height: 24px;
+    font-size: 14px;
+    margin: 0 auto;
+    @media screen and (max-width: 679px) {
+      gap: 8px;
+      font-size: 12px;
+      img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    a {
+      color: var(--whiteColor);
+    }
+    a.shopLink {
+      @include shopAnc;
+      color: var(--yellowColor);
+      border-bottom: 1px var(--yellowColor) solid;
+      @media screen and (max-width: 679px) {
+        display: none;
+      }
+    }
+  }
+}
+@mixin shopAnc {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 24px;
+  font-weight: 500;
+}
+@mixin cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  div {
+    background-color: var(--blackColor);
+    color: var(--yellowColor);
+    font-family: var(--interFont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 12px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+}
+@mixin startTextBlock {
+  text-align: left;
+  gap: 8px;
+  height: max-content;
+  h1 {
+    font-weight: 500;
+    span {
+      color: var(--blueColor);
+    }
+  }
+  p {
+    font-family: var(--interFont);
+    font-weight: 400;
+  }
+  a {
+    @include ancButton;
+  }
+}
+@mixin ancButton {
+  font-family: var(--interFont);
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: 8px;
+}
+@mixin pagination {
+  display: flex;
+  position: static;
+  width: auto;
+  .swiper-pagination-bullet {
+    background-color: inherit;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    &::before {
+      content: "";
+      background-color: var(--greyColor);
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    &.swiper-pagination-bullet-active {
+      border: 1px var(--blackColor) solid;
+      &::before {
+        background-color: var(--blackColor);
+      }
+    }
+  }
+}
+@mixin otherSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 3.33vw, 48px);
+}
+@mixin sectionTitle {
+  height: 44px;
+  width: 100%;
+  h2 {
+    font-weight: 500;
+    letter-spacing: -0.6px;
+    line-height: clamp(38px, 3.05vw, 44px);
+    font-size: clamp(28px, 2.77vw, 40px);
+  }
+}
+@mixin productCard {
+  background-color: inherit;
+  color: var(--blackColor);
+  font-family: var(--interFont);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 262px;
+  max-height: 459px;
+  @media screen and (max-width: 906px) {
+    width: clamp(152px, 25.49vw, 231px);
+    height: clamp(281px, 75.13vw, 412px);
+  }
+  .prodPreview {
+    position: relative;
+    .cardStatus {
+      background-color: var(--whiteColor);
+      position: absolute;
+      font-weight: 700;
+      top: 16px;
+      left: 16px;
+      font-size: 16px;
+      border-radius: 4px;
+      padding: 4px 14px 4px 14px;
+    }
+    a.prodToCart {
+      @include ancButton;
+      display: none;
+      position: absolute;
+      height: 46px;
+      width: calc(100% - 32px);
+      bottom: 16px;
+      left: 16px;
+      text-align: center;
+      align-content: center;
+    }
+    a.addToWList {
+      background-color: var(--whiteColor);
+      display: none;
+      position: absolute;
+      align-content: center;
+      text-align: center;
+      width: 32px;
+      height: 32px;
+      top: 16px;
+      right: 16px;
+      border-radius: 50%;
+    }
+    &:hover > a.prodToCart {
+      display: block;
+    }
+    &:hover > a.addToWList {
+      display: block;
+    }
+  }
+  .cardDesc {
+    color: var(--blackColor);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: clamp(4px, 0.83vw, 12px);
+    .cardName {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+    .cardPrice {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+@mixin sixthForm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  .sixthTitle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    h2 {
+      font-weight: 500;
+    }
+  }
+  .signUpInput {
+    color: var(--greyColor);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px var(--greyColorOpacity) solid;
+    height: 52px;
+    input {
+      font-weight: 500;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      padding-left: 8px;
+    }
+  }
+}
+@mixin fourthTextBlock {
+  display: flex;
+  flex-direction: column;
+  .fourthTitle {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-family: var(--interFont);
+      color: var(--blueColor);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    h2 {
+      font-weight: 400;
+      &:first-line {
+        font-weight: 500;
+      }
+    }
+  }
+  .fourthTimer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    span {
+      font-family: var(--interFont);
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .timer {
+      display: flex;
+      gap: 16px;
+      li {
+        text-align: center;
+        .timerValue {
+          background-color: var(--whiteColor);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          width: 60px;
+          height: 60px;
+          font-size: 34px;
+        }
+        .timerName {
+          font-family: var(--interFont);
+          font-weight: 400;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .fourthLink {
+    a {
+      @include ancButton;
+    }
+  }
+}
+@mixin dropdown {
+  @media screen and (min-width: 680px) {
+    li {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      a {
+        color: var(--blackColor);
+      }
+    }
+    .dropdown {
+      position: relative;
+      padding-right: 25px;
+      a {
+        &::after {
+          content: url(../img/dropArrow.svg);
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          right: 0;
+        }
+      }
+      .dropMenu {
+        display: none;
+      }
+    }
+    .dropdown:hover {
+      a {
+        &::after {
+          transform: rotate(180deg) translate(7px, -7px);
+        }
+      }
+      .dropMenu {
+        background-color: var(--yellowColorLight);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+        width: max-content;
+        top: 100%;
+        left: -24px;
+        li {
+          display: flex;
+          align-items: center;
+          height: 40px;
+          padding: 0 24px 0 24px;
+          a {
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 679px) {
+    .dropdown {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      height: max-content;
+      a {
+        &::after {
+          content: url(../img/dropArrow.svg);
+          position: absolute;
+          right: 24px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+      .dropMenu {
+        display: none;
+      }
+    }
+    .dropdown:focus-within {
+      a {
+        &::after {
+          transform: rotate(180deg) translate(7px, -7px);
+        }
+      }
+      .dropMenu {
+        background-color: var(--whiteColor);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        li {
+          display: flex;
+          align-items: center;
+          height: 40px;
+          a {
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

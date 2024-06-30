@@ -1,0 +1,152 @@
+<main>
+    <section class="start">
+        <div class="contentBorder startContent">
+            <div class="startTextBlock">
+                <h1>Listen to the <span>amazing</span> music sound.</h1>
+                <p>Experience music like never before</p>
+                <a href="javascript:void(0)">Shopping now</a>
+            </div>
+        </div>
+    </section>
+    <section class="first">
+        <div class="contentBorder firstContent">
+            <div class="firstTitle">
+                <h2>New Arrivals</h2>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="firstSlider swiper">
+                <div class="sliderWrapper swiper-wrapper">
+                    @@include("prodCard.html", { "img": "prod1.jpg", "name": "Skullcandy - Crusher anc 2 wireless headphones", "price": "$299.99", "status": "NEW" })
+                    @@include("prodCard.html", { "img": "prod2.jpg", "name": "Beats Studio Pro", "price": "$349.99", "status": "NEW" })
+                    @@include("prodCard.html", { "img": "prod3.jpg", "name": "Sony - WH-CH720N Wireless Noise Canceling", "price": "$149.99", "status": "NEW" })
+                    @@include("prodCard.html", { "img": "prod4.jpg", "name": "Skullcandy - Rail True Wireless Earbuds", "price": "$79.99", "status": "NEW" })
+                    @@include("prodCard.html", { "img": "prod5.jpg", "name": "Skullcandy - Crusher anc 2 wireless headphones", "price": "$299.99", "status": "NEW" })
+                    @@include("prodCard.html", { "img": "prod6.jpg", "name": "Sony - WH-CH720N Wireless Noise Canceling", "price": "$179.95", "status": "NEW" })
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second">
+        <div class="contentBorder secondContent">
+            <div class="secondTitle">
+                <h2>Shop Collection</h2>
+            </div>
+            <div class="secondCards">
+                <div class="linkCard tall">
+                    <img src="img/secondPrev.jpg" width="548" height="664">
+                    <div class="linkTextBlock">
+                        <h3>Headband</h3>
+                        <a href="javascript:void(0)">Collection <img src="img/arrowBlack.svg"></a>
+                    </div>
+                </div>
+                <div class="tall">
+                    <div class="linkCard">
+                        <img src="img/secondPrev2.jpg" width="548" height="319">
+                        <div class="linkTextBlock">
+                            <h3>Earbuds</h3>
+                            <a href="javascript:void(0)">Collection <img src="img/arrowBlack.svg"></a>
+                        </div>
+                    </div>
+                    <div class="linkCard">
+                        <img src="img/secondPrev3.jpg" width="548" height="319">
+                        <div class="linkTextBlock">
+                            <h3>Accessories</h3>
+                            <a href="javascript:void(0)">Collection <img src="img/arrowBlack.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="third">
+        <div class="contentBorder thirdContent">
+            <div class="thirdTitle">
+                <h2>Best Seller</h2>
+            </div>
+            <div class="thirdProdList">
+                @@include("prodCard.html", { "img": "prod1.jpg", "name": "Skullcandy - Crusher anc 2 wireless headphones", "price": "$299.99", "status": "HOT" })
+                @@include("prodCard.html", { "img": "prod2.jpg", "name": "Beats Studio Pro", "price": "$349.99", "status": "HOT" })
+                @@include("prodCard.html", { "img": "prod6.jpg", "name": "JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports", "price": "$179.95", "status": "HOT" })
+                @@include("prodCard.html", { "img": "prod4.jpg", "name": "Skullcandy - Rail True Wireless Earbuds", "price": "$79.99", "status": "HOT"})
+                @@include("prodCard.html", { "img": "prod5.jpg", "name": "Beats Studio Pro", "price": "$249.99", "status": "HOT" })
+                @@include("prodCard.html", { "img": "prod3.jpg", "name": "Sony - WH-CH720N Wireless Noise Canceling", "price": "$149.99", "status": "HOT" })
+                @@include("prodCard.html", { "img": "prod7.jpg", "name": "Bose QuietComfort Headphones", "price": "$349.00", "status": "HOT" })
+                @@include("prodCard.html", { "img": "prod4.jpg", "name": "Skullcandy - Rail True Wireless Earbuds", "price": "79.99", "status": "HOT" })
+            </div>
+        </div>
+    </section>
+    <section class="fourth">
+        <div class="contentBorder fourthContent">
+            <div class="fourthTextBlock">
+                <div class="fourthTitle">
+                    <span>PROMOTION</span>
+                    <h2>Hurry up! 40% OFF Thousands of high tech are waiting for you</h2>
+                </div>
+                <div class="fourthTimer">
+                    <span>Offer expires in:</span>
+                    <ul class="timer">
+                        <li>
+                            <div class="timerValue days">02</div>
+                            <span class="timerName">Days</span>
+                        </li>
+                        <li>
+                            <div class="timerValue days">12</div>
+                            <span class="timerName">Hours</span>
+                        </li>
+                        <li>
+                            <div class="timerValue days">45</div>
+                            <span class="timerName">Minutes</span>
+                        </li>
+                        <li>
+                            <div class="timerValue days">05</div>
+                            <span class="timerName">Seconds</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fourthLink">
+                    <a href="javascript:void(0)">Shop now</a>
+                </div>
+            </div>
+            <img class="mobilePlaceholder" src="img/fourthBackMobile.jpg">
+        </div>
+    </section>
+    <section class="fifth">
+        <ul class="contentBorder fifthContent">
+            <li class="fifthCard">
+                <img src="img/shipping.svg">
+                <h3>Free Shipping</h3>
+                <span>Order above 200$</span>
+            </li>
+            <li class="fifthCard">
+                <img src="img/finance.svg">
+                <h3>Money-back</h3>
+                <span>30 days guarantee</span>
+            </li>
+            <li class="fifthCard">
+                <img src="img/lock.svg">
+                <h3>Secure Payments</h3>
+                <span>Secured by Stripe</span>
+            </li>
+            <li class="fifthCard">
+                <img src="img/call.svg">
+                <h3>24/7 Support</h3>
+                <span>Phone and Email support</span>
+            </li>
+        </ul>
+    </section>
+    <section class="sixth">
+        <div class="contentBorder sixthContent">
+            <form id="signUp" action="">
+                <div class="sixthTitle">
+                    <h2>Join Our Newsletter</h2>
+                    <p>Sign up for deals, new products and promotions</p>
+                </div>
+                <div class="signUpInput">
+                    <img src="img/email.svg">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>

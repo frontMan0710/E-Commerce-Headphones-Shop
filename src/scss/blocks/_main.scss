@@ -1,0 +1,636 @@
+@import "./src/scss/base/visual";
+@import "./src/scss/base/font";
+@media screen and (min-width: 1440px) {
+  main {
+    .start {
+      background-image: url("../img/startBack.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 100%;
+      height: 820px;
+      .startContent {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .startTextBlock {
+          @include startTextBlock;
+          max-width: 560px;
+          a {
+            width: 234px;
+            height: 56px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    .first {
+      height: 647px;
+      .firstContent {
+        @include otherSection;
+        .firstTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .swiper-pagination {
+            @include pagination
+          }
+        }
+        .firstSlider {
+          .sliderWrapper {
+            .prodCard {
+              @include productCard;
+            }
+          }
+        }
+      }
+    }
+    .second {
+      height: 804px;
+      .secondContent {
+        @include otherSection;
+        .secondCards {
+          display: flex;
+          width: 100%;
+          .tall {
+            height: 100%;
+            &:last-child {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .linkCard {
+            position: relative;
+            width: 548px;
+            .linkTextBlock {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              position: absolute;
+              width: max-content;
+              font-weight: 500;
+              bottom: 48px;
+              left: 48px;
+              a {
+                @include shopAnc;
+                color: var(--blackColor);
+                border-bottom: 1px var(--blackColor) solid;
+                width: max-content;
+              }
+            }
+          }
+        }
+      }
+    }
+    .third {
+      height: max-content;
+      .thirdContent {
+        @include otherSection;
+        min-width: 1120px;
+        .thirdTitle {
+          @include sectionTitle;
+        }
+        .thirdProdList {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          width: 100%;
+          .prodCard {
+            @include productCard;
+          }
+        }
+      }
+    }
+    .fourth {
+      background-color: var(--yellowColorOpacity);
+      padding: 0;
+      .fourthContent {
+        background-image: url(../img/fourthBack.jpg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 1440px;
+        .fourthTextBlock {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          width: 488px;
+          .fourthTitle {
+            display: flex;
+            flex-direction: column;
+            span {
+              font-family: var(--interFont);
+              color: var(--blueColor);
+              font-weight: 700;
+            }
+            h2 {
+              font-weight: 400;
+              &:first-line {
+                font-weight: 500;
+              }
+            }
+          }
+
+          .fourthTimer {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            span {
+              font-family: var(--interFont);
+              font-weight: 400;
+            }
+            .timer {
+              display: flex;
+              gap: 16px;
+              li {
+                text-align: center;
+                .timerValue {
+                  background-color: var(--whiteColor);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 500;
+                  width: 60px;
+                  height: 60px;
+                  font-size: 34px;
+                }
+                .timerName {
+                  font-family: var(--interFont);
+                  font-weight: 400;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .fourthLink {
+            a {
+              @include ancButton;
+              width: 154px;
+              height: 40px;
+            }
+          }
+        }
+        .mobilePlaceholder {
+          display: none;
+        }
+      }
+    }
+    .fifth {
+      height: 300px;
+      padding: 40px 0 40px 0;
+      .fifthContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .fifthCard {
+          background-color: var(--clayColor);
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 16px;
+          height: 220px;
+          padding: 48px 32px 48px 32px;
+          h3 {
+            color: var(--blackColor);
+            font-weight: 500;
+          }
+          span {
+            color: var(--greyColor);
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .sixth {
+      background-image: url(../img/sixthBack.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 360px;
+      .sixthContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form#signUp {
+          @include sixthForm;
+          .signUpInput {
+            width: 488px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 907px) {
+  main {
+    .start {
+      background-image: url("../img/startBackM.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      height: 820px;
+      .startContent {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .startTextBlock {
+          @include startTextBlock;
+          max-width: 560px;
+          width: 38.88vw;
+          a {
+            width: 234px;
+            height: 56px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    .first {
+      height: 647px;
+      .firstContent {
+        @include otherSection;
+        .firstTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .swiper-pagination {
+            @include pagination
+          }
+        }
+        .firstSlider {
+          .sliderWrapper {
+            .prodCard {
+              @include productCard;
+            }
+          }
+        }
+      }
+    }
+    .second {
+      height: auto;
+      .secondContent {
+        @include otherSection;
+        .secondCards {
+          display: flex;
+          width: 100%;
+          .tall {
+            height: 100%;
+            &:last-child {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .linkCard {
+            position: relative;
+            max-width: 548px;
+            width: 38.05vw;
+            .linkTextBlock {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              position: absolute;
+              width: max-content;
+              font-weight: 500;
+              bottom: 32px;
+              left: 32px;
+              a {
+                @include shopAnc;
+                color: var(--blackColor);
+                border-bottom: 1px var(--blackColor) solid;
+                width: max-content;
+              }
+            }
+          }
+        }
+      }
+    }
+    .third {
+      height: max-content;
+      .thirdContent {
+        @include otherSection;
+        .thirdProdList {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          width: 100%;
+          height: max-content;
+          .prodCard {
+            @include productCard;
+          }
+        }
+      }
+    }
+    .fourth {
+      background-color: var(--yellowColorOpacity);
+      padding: 0;
+      .fourthContent {
+        background-image: url(../img/fourthBack.jpg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100vw;
+        .fourthTextBlock {
+          @include fourthTextBlock;
+          gap: 12px;
+          max-width: 560px;
+          width: 38.88vw;
+          .fourthLink {
+            a {
+              width: 154px;
+              height: 40px;
+            }
+          }
+        }
+        .mobilePlaceholder {
+          display: none;
+        }
+      }
+    }
+    .fifth {
+      height: 280px;
+      padding: 40px 0 40px 0;
+      .fifthContent {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .fifthCard {
+          background-color: var(--clayColor);
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 16px;
+          height: 200px;
+          padding: 32px 16px 16px 16px;
+          h3 {
+            color: var(--blackColor);
+            font-weight: 500;
+          }
+          span {
+            color: var(--greyColor);
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .sixth {
+      background-image: url(../img/sixthBack.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 360px;
+      .sixthContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form#signUp {
+          @include sixthForm;
+          .signUpInput {
+            max-width: 488px;
+            width: 33.88vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 906px) and (min-width: 300px) {
+  main {
+    .start {
+      background-image: url("../img/startBackMobile.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 100%;
+      height: 692px;
+      .startContent {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        .startTextBlock {
+          @include startTextBlock;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          max-width: 375px;
+          a {
+            width: 234px;
+            height: 56px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    .first {
+      .firstContent {
+        @include otherSection;
+        .firstTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .swiper-pagination {
+            @include pagination;
+          }
+        }
+        .firstSlider {
+          width: 100%;
+          .sliderWrapper {
+            .prodCard {
+              @include productCard;
+            }
+          }
+        }
+      }
+    }
+    .second {
+      height: auto;
+      .secondContent {
+        @include otherSection;
+        .secondCards {
+          display: flex;
+          height: clamp(377px, 48.01vw, 435px);
+          width: 100%;
+          .tall {
+            height: 100%;
+            &:last-child {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          .linkCard {
+            background-color: var(--greyColorLight);
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            max-width: 548px;
+            width: 41.47vw;
+            height: 100%;
+            &:first-child {
+              align-items: center;
+            }
+            .linkTextBlock {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              position: absolute;
+              width: max-content;
+              font-weight: 500;
+              bottom: 32px;
+              left: 32px;
+              a {
+                @include shopAnc;
+                color: var(--blackColor);
+                border-bottom: 1px var(--blackColor) solid;
+                width: max-content;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 559px) {
+          .secondCards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            height: max-content;
+            .tall {
+              width: 100%;
+              min-height: 377px;
+              .linkCard {
+                width: 100%;
+                .linkTextBlock {
+                  font-size: 28px;
+                  a {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .third {
+      height: max-content;
+      .thirdContent {
+        @include otherSection;
+        .thirdProdList {
+          display: flex;
+          flex-wrap: wrap;
+          gap: clamp(8px, 1.76vw, 16px);
+          width: 100%;
+          height: max-content;
+          .prodCard {
+            @include productCard;
+          }
+        }
+      }
+    }
+    .fourth {
+      background-color: var(--yellowColorOpacity);
+      height: 367px;
+      padding: 0;
+      .fourthContent {
+        background-image: url(../img/fourthBackMobile.jpg);
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100vw;
+        .mobilePlaceholder {
+          display: none;
+        }
+        .fourthTextBlock {
+          @include fourthTextBlock;
+          gap: 12px;
+          width: clamp(256px, 38.85vw, 50%);
+          .fourthLink {
+            a {
+              width: 154px;
+              height: 40px;
+            }
+          }
+          .fourthTimer {
+            .timer {
+              gap: 12px;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 719px) {
+        height: 734px;
+        .fourthContent {
+          background-image: none;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: column;
+          width: 100%;
+          .fourthTextBlock {
+            margin-top: 28px;
+          }
+          .mobilePlaceholder {
+            display: initial;
+            max-width: 375px;
+            max-height: 367px;
+          }
+        }
+      }
+    }
+    .fifth {
+      height: max-content;
+      padding: 32px 0 32px 0;
+      .fifthContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(8px, 1.76vw, 16px);
+        .fifthCard {
+          background-color: var(--clayColor);
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 16px;
+          width: clamp(152px, 25.49vw, 231px);
+          height: 200px;
+          padding: 32px 16px 16px 16px;
+          h3 {
+            color: var(--blackColor);
+            font-weight: 500;
+          }
+          span {
+            color: var(--greyColor);
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .sixth {
+      background-color: var(--greyColorLight);
+      height: 360px;
+      .sixthContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form#signUp {
+          @include sixthForm;
+          align-items: center;
+          .signUpInput {
+            width: clamp(266px, 53.86vw, 488px);
+          }
+        }
+      }
+    }
+  }
+}
