@@ -1,5 +1,6 @@
 const gulp = require('gulp');
-const ghPages = require('gulp-gh-pages')
+const ghPages = require('gh-pages')
+const path = require('path');
 
 // Tasks
 require('./gulp/dev.js');
@@ -22,10 +23,13 @@ gulp.task(
 		gulp.parallel('server:docs')
 	)
 );
-gulp.task('deploy', function () {
-	return gulp.src('./build/**/*')
-		.pipe(ghPages({
-			remoteUrl: 'https://github.com/frontMan0710/E-Commerce-Headphones-Shop.git', // замените на ваш репозиторий
-			branch: 'gh-pages'
-		}))
+gulp.task('deploy', function (done) {
+	ghPages.publish(path.join(process.cwd(), './build'), function (err) {
+		if (err) {
+			console.error('Deploy failed:', err);
+		} else {
+			console.log('Deploy successful!');
+		}
+		done();
+	});
 });
