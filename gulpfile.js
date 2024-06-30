@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages')
 
 // Tasks
 require('./gulp/dev.js');
@@ -21,3 +22,10 @@ gulp.task(
 		gulp.parallel('server:docs')
 	)
 );
+gulp.task('deploy', function () {
+	return gulp.src('./build/**/*')
+		.pipe(ghPages({
+			remoteUrl: 'https://github.com/frontMan0710/E-Commerce-Headphones-Shop.git', // замените на ваш репозиторий
+			branch: 'gh-pages'
+		}))
+});
