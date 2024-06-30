@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>E-Commerce - Headphones shop</title>
+	<link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+    <nav class="navOffer">
+        <div class="contentBorder navContent">
+            <div class="notification">
+                <img src="img/ticketPercent.svg" width="24" height="24">
+                <a>30% off storewide — Limited time! </a>
+                <a href="javascript:void(0)" class="shopLink">Show Now <img src="img/arrowRight.svg"></a>
+            </div>
+            <button class="closeNav" type="button"><img src="img/close.svg"></button>
+        </div>
+    </nav>
+    <nav class="navHeader">
+        <div class="contentBorder navContent">
+            <div class="logo">
+                <button type="button" id="burgerIcon"><span></span></button>
+                <img class="logoImg" src="img/logo.svg" width="105" height="24">
+            </div>
+            <div id="menuContent">
+                <ul class="navigation">
+                    <li class="mobileNavigation">
+                        <img class="logo" src="img/logoMobile.svg">
+                        <button type="button" class="closeBurger"><img src="img/closeCross.svg"></button>
+                    </li>
+                    <li class="mobileSearch">
+                        <img src="img/search.svg">
+                        <input class="searchInput" type="text" placeholder="Search">
+                    </li>
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li class="dropdown"><a href="javascript:void(0)">Shop</a>
+                        <ul class="dropMenu">
+                            <li><a href="javascript:void(0)">List item</a></li>
+                            <li><a href="javascript:void(0)">List item</a></li>
+                            <li><a href="javascript:void(0)">List item</a></li>
+                            <li><a href="javascript:void(0)">List item</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="javascript:void(0)">Product</a>
+                        <ul class="dropMenu">
+                            <li><a href="javascript:void(0)">List item</a></li>
+                            <li><a href="javascript:void(0)">List item</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)">Contact Us</a></li>
+                </ul>
+                <ul class="userMenu">
+                    <li class="icon mobileCart">
+                        <span>Cart</span>
+                        <div class="cart">
+                            <img src="img/cart.svg">
+                            <div><span class="cartCounter">2</span></div>
+                        </div>
+                    </li>
+                    <li class="icon mobileWishlist">
+                        <span>Wishlist</span>
+                        <div class="wishlist">
+                            <img src="img/heartWL.svg">
+                            <div><span class="cartCounter">2</span></div>
+                        </div>
+                    </li>
+                    <li class="mobileSignIn">
+                        <a href="javascript:void(0)" class="signIn">Sign In</a>
+                    </li>
+                    <li class="mobileLinks">
+                        <ul class="contactLinks">
+                            <li><a href="javascript:void(0)"><img src="img/instagramDark.svg"></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/facebookDark.svg"></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/youtubeDark.svg"></a></li>
+                        </ul>
+                    </li>
+                    <li class="icon searchButton"><img src="img/search.svg"></li>
+                    <li class="icon userProfile"><img src="img/user.svg"></li>
+                </ul>
+            </div>
+            <ul class="userMenu">
+                <li class="icon searchButton"><img src="img/search.svg"></li>
+                <li class="icon userProfile"><img src="img/user.svg"></li>
+                <li class="icon cart">
+                    <img src="img/cart.svg">
+                    <div><span class="cartCounter">2</span></div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+		<main>
+    <section class="start">
+        <div class="contentBorder startContent">
+            <div class="startTextBlock">
+                <h1>Listen to the <span>amazing</span> music sound.</h1>
+                <p>Experience music like never before</p>
+                <a href="javascript:void(0)">Shopping now</a>
+            </div>
+        </div>
+    </section>
+    <section class="first">
+        <div class="contentBorder firstContent">
+            <div class="firstTitle">
+                <h2>New Arrivals</h2>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="firstSlider swiper">
+                <div class="sliderWrapper swiper-wrapper">
+                    <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod1.jpg" width="262" height="349">
+        <div class="cardStatus">NEW</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Skullcandy - Crusher anc 2 wireless headphones</div>
+        <div class="cardPrice">$299.99</div>
+    </div>
+</div>
+                    <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod2.jpg" width="262" height="349">
+        <div class="cardStatus">NEW</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Beats Studio Pro</div>
+        <div class="cardPrice">$349.99</div>
+    </div>
+</div>
+                    <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod3.jpg" width="262" height="349">
+        <div class="cardStatus">NEW</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Sony - WH-CH720N Wireless Noise Canceling</div>
+        <div class="cardPrice">$149.99</div>
+    </div>
+</div>
+                    <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod4.jpg" width="262" height="349">
+        <div class="cardStatus">NEW</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Skullcandy - Rail True Wireless Earbuds</div>
+        <div class="cardPrice">$79.99</div>
+    </div>
+</div>
+                    <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod5.jpg" width="262" height="349">
+        <div class="cardStatus">NEW</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Skullcandy - Crusher anc 2 wireless headphones</div>
+        <div class="cardPrice">$299.99</div>
+    </div>
+</div>
+                    <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod6.jpg" width="262" height="349">
+        <div class="cardStatus">NEW</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Sony - WH-CH720N Wireless Noise Canceling</div>
+        <div class="cardPrice">$179.95</div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second">
+        <div class="contentBorder secondContent">
+            <div class="secondTitle">
+                <h2>Shop Collection</h2>
+            </div>
+            <div class="secondCards">
+                <div class="linkCard tall">
+                    <img src="img/secondPrev.jpg" width="548" height="664">
+                    <div class="linkTextBlock">
+                        <h3>Headband</h3>
+                        <a href="javascript:void(0)">Collection <img src="img/arrowBlack.svg"></a>
+                    </div>
+                </div>
+                <div class="tall">
+                    <div class="linkCard">
+                        <img src="img/secondPrev2.jpg" width="548" height="319">
+                        <div class="linkTextBlock">
+                            <h3>Earbuds</h3>
+                            <a href="javascript:void(0)">Collection <img src="img/arrowBlack.svg"></a>
+                        </div>
+                    </div>
+                    <div class="linkCard">
+                        <img src="img/secondPrev3.jpg" width="548" height="319">
+                        <div class="linkTextBlock">
+                            <h3>Accessories</h3>
+                            <a href="javascript:void(0)">Collection <img src="img/arrowBlack.svg"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="third">
+        <div class="contentBorder thirdContent">
+            <div class="thirdTitle">
+                <h2>Best Seller</h2>
+            </div>
+            <div class="thirdProdList">
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod1.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Skullcandy - Crusher anc 2 wireless headphones</div>
+        <div class="cardPrice">$299.99</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod2.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Beats Studio Pro</div>
+        <div class="cardPrice">$349.99</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod6.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">JBL Reflect Flow Pro+ Bluetooth Truly Wireless Sports</div>
+        <div class="cardPrice">$179.95</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod4.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Skullcandy - Rail True Wireless Earbuds</div>
+        <div class="cardPrice">$79.99</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod5.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Beats Studio Pro</div>
+        <div class="cardPrice">$249.99</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod3.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Sony - WH-CH720N Wireless Noise Canceling</div>
+        <div class="cardPrice">$149.99</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod7.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Bose QuietComfort Headphones</div>
+        <div class="cardPrice">$349.00</div>
+    </div>
+</div>
+                <div class="prodCard swiper-slide">
+    <div class="prodPreview">
+        <img src="img/prod4.jpg" width="262" height="349">
+        <div class="cardStatus">HOT</div>
+        <a class="prodToCart" href="javascript:void(0)">Add to cart</a>
+        <a class="addToWList" href="javascript:void(0)">
+            <img src="img/heart.svg">
+        </a>
+    </div>
+    <div class="cardDesc">
+        <div class="cardRating">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+            <img src="img/star.svg">
+        </div>
+        <div class="cardName">Skullcandy - Rail True Wireless Earbuds</div>
+        <div class="cardPrice">79.99</div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    <section class="fourth">
+        <div class="contentBorder fourthContent">
+            <div class="fourthTextBlock">
+                <div class="fourthTitle">
+                    <span>PROMOTION</span>
+                    <h2>Hurry up! 40% OFF Thousands of high tech are waiting for you</h2>
+                </div>
+                <div class="fourthTimer">
+                    <span>Offer expires in:</span>
+                    <ul class="timer">
+                        <li>
+                            <div class="timerValue days">02</div>
+                            <span class="timerName">Days</span>
+                        </li>
+                        <li>
+                            <div class="timerValue days">12</div>
+                            <span class="timerName">Hours</span>
+                        </li>
+                        <li>
+                            <div class="timerValue days">45</div>
+                            <span class="timerName">Minutes</span>
+                        </li>
+                        <li>
+                            <div class="timerValue days">05</div>
+                            <span class="timerName">Seconds</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fourthLink">
+                    <a href="javascript:void(0)">Shop now</a>
+                </div>
+            </div>
+            <img class="mobilePlaceholder" src="img/fourthBackMobile.jpg">
+        </div>
+    </section>
+    <section class="fifth">
+        <ul class="contentBorder fifthContent">
+            <li class="fifthCard">
+                <img src="img/shipping.svg">
+                <h3>Free Shipping</h3>
+                <span>Order above 200$</span>
+            </li>
+            <li class="fifthCard">
+                <img src="img/finance.svg">
+                <h3>Money-back</h3>
+                <span>30 days guarantee</span>
+            </li>
+            <li class="fifthCard">
+                <img src="img/lock.svg">
+                <h3>Secure Payments</h3>
+                <span>Secured by Stripe</span>
+            </li>
+            <li class="fifthCard">
+                <img src="img/call.svg">
+                <h3>24/7 Support</h3>
+                <span>Phone and Email support</span>
+            </li>
+        </ul>
+    </section>
+    <section class="sixth">
+        <div class="contentBorder sixthContent">
+            <form id="signUp" action="">
+                <div class="sixthTitle">
+                    <h2>Join Our Newsletter</h2>
+                    <p>Sign up for deals, new products and promotions</p>
+                </div>
+                <div class="signUpInput">
+                    <img src="img/email.svg">
+                    <input type="email" placeholder="Email address">
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+		<footer>
+	<div class="contentBorder footerContent">
+		<div class="footerLinks">
+			<div class="logo">
+				<img src="img/logoLight.svg">
+			</div>
+			<div class="footerNav">
+				<span>Headphone Store</span>
+				<ul>
+					<li><a href="javascript:void(0)">Home</a></li>
+					<li><a href="javascript:void(0)">Shop</a></li>
+					<li><a href="javascript:void(0)">Product</a></li>
+					<li><a href="javascript:void(0)">Blog</a></li>
+					<li><a href="javascript:void(0)">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footerLinks">
+			<p class="mobilePolicy">Copyright © 2023 3legant. All rights reserved</p>
+			<ul class="policy">
+				<li><p>Copyright © 2023 3legant. All rights reserved</p></li>
+				<li><a href="javascript:void(0)">Privacy Policy</a></li>
+				<li><a href="javascript:void(0)">Terms of Use</a></li>
+			</ul>
+			<ul class="contactLinks">
+				<li><a href="javascript:void(0)"><img src="img/instagram.svg"></a></li>
+				<li><a href="javascript:void(0)"><img src="img/facebook.svg"></a></li>
+				<li><a href="javascript:void(0)"><img src="img/youtube.svg"></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+	</div>
+
+	<script src="./js/index.bundle.js"></script>
+</body>
+</html>
