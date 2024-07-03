@@ -245,6 +245,9 @@
 								display: flex;
 								gap: 24px;
 							}
+							&.searchButton, &.userProfile {
+								display: none;
+							}
 						}
 					}
 				}

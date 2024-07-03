@@ -4,6 +4,8 @@ const sass = require('gulp-sass')(require('sass'));
 const sassGlob = require('gulp-sass-glob');
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
 const fs = require('fs');
 const sourceMaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
@@ -59,6 +61,7 @@ gulp.task('sass:dev', function () {
 			.pipe(sassGlob())
 			.pipe(sass())
 			.pipe(sourceMaps.write())
+			.pipe(cleanCSS())
 			.pipe(gulp.dest('./build/css/'))
 	);
 });
@@ -90,6 +93,7 @@ gulp.task('js:dev', function () {
 		.src('./src/js/*.js')
 		.pipe(changed('./build/js/'))
 		.pipe(plumber(plumberNotify('JS')))
+		.pipe(uglify())
 		// .pipe(babel())
 		.pipe(webpack(require('./../webpack.config.js')))
 		.pipe(gulp.dest('./build/js/'));
